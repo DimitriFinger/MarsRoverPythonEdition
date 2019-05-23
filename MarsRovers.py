@@ -29,25 +29,21 @@ def process_movement(movements, facing, pos_x, pos_y, map_size_x, map_size_y):
         if commands == "M" and facing=="W":
             if pos_x > 0:
                 pos_x -= 1
-    return print("Final position: " + str(pos_x) + " " + str(pos_y) + " " + facing)             
-
+    return print("Final position: " + str(pos_x) + " " + str(pos_y) + " " + facing)           
 
 def rover(entry_string):
     new_string = entry_string.split(" ")
 
-
-    if int(new_string[0])>=0:
+    if int(new_string[0])>=0 and int(new_string[1])>=0:
         map_size_x = int(new_string[0])
-    if int(new_string[1])>=0:
-        map_size_y = int(new_string[1])
-    
+        map_size_y = int(new_string[1])      
+        
     pos_x = int(new_string[2])
     pos_y = int(new_string[3])
     facing = new_string[4]
     print("Initial position : " + str(pos_x) + " " + str(pos_y) + " " + facing)
     process_movement(new_string[5], facing, pos_x, pos_y, map_size_x, map_size_y)
 
-#entry_string = "5 5 1 2 N MM" 
 rover("5 5 1 2 N MM")
 rover("5 5 1 2 N MMRMMRMM")
 rover("5 5 1 2 N MMMMMMM")
