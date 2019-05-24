@@ -37,7 +37,7 @@ def rover(entry_string):
     if int(new_string[0])>=0 and int(new_string[1])>=0:      
         field = (int(new_string[0]),int(new_string[1])) 
 
-    position=(new_string[2], new_string[3])
+    position=(int(new_string[2]), int(new_string[3]))
     
     facing = new_string[4]
     print("Initial position : " + str(position[0]) + " " + str(position[1]) + " " + facing)
