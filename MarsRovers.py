@@ -29,7 +29,7 @@ def process_movement(movements, facing, position, field):
         if commands == "M" and facing=="W":
             if position[0] > 0:
                position=(position[0] - 1, position[1])
-    return print("Final position: " + str(position[0]) + " " + str(position[1]) + " " + facing)           
+    return print("Final position: %s %s %s" % (position[0], position[1], facing))           
 
 def rover(entry_string):
     new_string = entry_string.split(" ")
@@ -40,7 +40,7 @@ def rover(entry_string):
     position=(int(new_string[2]), int(new_string[3]))
     
     facing = new_string[4]
-    print("Initial position : " + str(position[0]) + " " + str(position[1]) + " " + facing)
+    print("Initial position : %s %s %s" % (position[0], position[1], facing))
     process_movement(new_string[5], facing, position, field)
 
 rover("5 5 1 2 N MM")
