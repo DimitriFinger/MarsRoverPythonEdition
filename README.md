@@ -1,2 +1,2 @@
 # MarsRoverPythonEdition
-MarsRovers Challenge solved in python.
+MarsRovers Challenge developed in python.
